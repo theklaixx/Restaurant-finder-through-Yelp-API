@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Restaurants in {{ user_city }}</title>
+</head>
+<body>
+    <header>
+        <h1>Restaurants in {{ user_city }}</h1>
+    </header>
+
+<!--If the restaurants variable (dictionary) is passed from the server and it is not empty or None-->
+{% if restaurants %}
+<table>
+    <thead>
+        <tr>
+            <th>Restaurant Name</th>
+            <th>Rating</th>
+            <th>Restaurant URL</th>
+        </tr> 
+    </thead>
+    <tbody>
+        {% for restaurant in restaurants %}
+        <tr>
+            <td>{{ restaurant.name }}</td>
+            <td>{{ restaurant.rating }}</td>
+            <td><a href="{{ restaurant.url }}">Yelp Page</a></td>
+        </tr>
+        {% endfor %}
+    </tbody>   
+</table>
+<!--If the message variable is passed from the server and it is not empty or None-->
+{% elif message %}
+    <p>{{ message }}</p>
+{% endif %}
+
+<div class="button">
+    <a href="/">New Search</a>
+    </div>
+

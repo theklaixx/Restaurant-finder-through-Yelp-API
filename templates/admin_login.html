@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title> Admin Log In Page</title>
+</head>
+
+
+<body>
+<header>
+   <h1> Admin Log In Page </h1>
+</header>
+
+<main>
+    {%if error_message%}
+        <div class="error">
+        <p>{{error_message|safe}}</p>
+    </div>
+    {%endif%}
+
+    <div class="log-in">
+        <h2>Login Form</h2>
+        <form action="/admin_login" method="post">
+            <input type="text" name="username" placeholder="Username" required>
+            <input type="password" name="password" placeholder="Password" required>
+            <button type="submit">Login</button>
+        </form>
+    </div>
+
+</main>
+
+</body>

@@ -1,0 +1,129 @@
+/* style.css */
+
+body {
+    text-align: center; 
+    font-size: 18px; 
+    color: #3c4043; 
+}
+
+header {
+    width: 100%;
+    height: 150px; 
+    padding: 10px 0;
+    margin-bottom: 100px;
+    background-color: #48494B;
+    color: white;
+}
+
+main{  margin: 220px 0;
+}
+
+footer {
+    width: 100%;
+    height: 50px; 
+    padding: 10px 0;
+    color: black;
+    text-align: center;
+    font-size: 15px;
+}
+
+.search-container {
+    padding-bottom: 100px;
+}
+
+/* Styles for the search input */
+input[type="text"] {
+    width: 40%; /* Adjust width as needed */
+    padding: 10px;
+    border: 1px solid #dfe1e5;
+    border-radius: 15px; 
+    box-shadow: 0 1px 6px darkgray;
+    font-size: 16px; 
+}
+
+input[type="password"] {
+    width: 40%; /* Adjust width as needed */
+    padding: 10px;
+    border: 1px solid #dfe1e5;
+    border-radius: 15px; 
+    box-shadow: 0 1px 6px darkgray;
+    font-size: 16px; 
+}
+
+input[type="password"]::placeholder {
+    color: #9AA0A6; 
+}
+
+input[type="text"]::placeholder {
+    color: #9AA0A6; 
+}
+
+input[type="submit"]:hover {
+    background-color: #e8eaed;
+}
+
+button {
+    padding: 10px 20px;
+    border: 1px solid #dfe1e5;
+    background-color: #f8f9fa;
+    font-size: 16px;
+    color: #3c4043;
+    border-radius: 25px; /*rounder edges*/
+}
+
+label {
+    display: block; /* element takes full line */
+    margin-bottom: 10px; 
+    padding: 5px 0; 
+    font-size: 18px; 
+    color: #3c4043; 
+}
+
+table{
+    width: 60%; 
+    margin: 20px auto;
+    padding: 0;
+    border-radius: 5px; /*rounder edges*/
+}
+
+tr {
+    padding: 10px 20px; 
+    margin-bottom: 10px; 
+    border: 1px solid lightgrey; 
+    border-radius: 5px; /*rounder edges*/
+    text-align: center;   
+}
+
+thead tr {
+    background-color: #f4f4f4;
+}
+
+tr:hover {
+    background-color: #f9f9f9; 
+    cursor: pointer; /* clickable cursor*/
+}
+
+.button a{
+    margin: 20px;
+    padding: 10px 20px;
+    border: 1px solid #dfe1e5;
+    border-radius: 20px; /*rounder edges*/
+    background-color: #f8f9fa;
+    font-size: 16px;
+    color: #3c4043;
+    cursor: pointer; 
+}
+
+a:hover{
+background-color: #e8eaed;
+cursor: pointer; /* clickable cursor*/
+}
+
+.error{
+    border: 1px solid darkred;
+    border-radius: 20px; /*rounder edges*/
+    display: inline-block; /* Or 'block', depending on layout */
+    padding: 10px 15px; 
+    text-align: center; /* Center-align the text */
+    color: #560b06; /* Text color */
+}
